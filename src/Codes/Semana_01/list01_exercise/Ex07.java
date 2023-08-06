@@ -1,4 +1,4 @@
-package br.edu.ifsp.list01;
+package Codes.Semana_01.list01_exercise;
 
 /*
     Um motorista de Uber estipula o preço de uma determinada viagem dada a quantidade de quilômetros percorrida.

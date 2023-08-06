@@ -1,4 +1,4 @@
-package br.edu.ifsp.list01;
+package Codes.Semana_01.list01_exercise;
 
 import java.util.Scanner;
 

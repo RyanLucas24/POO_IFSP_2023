@@ -1,4 +1,4 @@
-package br.edu.ifsp.list01;
+package Codes.Semana_01.list01_exercise;
 
 /*
     Sabe-se que uma lata de tinta tem um custo C e é capaz de pintar uma área de M metros quadrados.

@@ -1,4 +1,4 @@
-package br.edu.ifsp.list01;
+package Codes.Semana_01.list01_exercise;
 
 /*
     A avenida principal da cidade de Algoritmopolis possui limite de velocidade de L km/h.

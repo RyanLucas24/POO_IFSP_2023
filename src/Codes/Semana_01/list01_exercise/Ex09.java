@@ -1,4 +1,4 @@
-package br.edu.ifsp.list01;
+package     Codes.Semana_01.list01_exercise;
 
 /*
     Faça um programa que leia um conjunto de valores que correspondem as idades de pessoas de uma comunidade. Quando

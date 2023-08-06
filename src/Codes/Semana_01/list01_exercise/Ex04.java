@@ -1,4 +1,4 @@
-package br.edu.ifsp.list01;
+package Codes.Semana_01.list01_exercise;
 
 /*
     Osmar adora chocolates e vai para a loja com N dinheiro no bolso. O preço de cada chocolate é C.

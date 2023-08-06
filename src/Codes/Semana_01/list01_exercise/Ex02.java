@@ -1,4 +1,4 @@
-package br.edu.ifsp.list01;
+package Codes.Semana_01.list01_exercise;
 
 /*
     Sejam a, b e c os três lados de um triângulo. Elabore um algoritmo que verifica se o triângulo é:
@@ -24,11 +24,29 @@ public class Ex02 {
         //Leia o input
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
         //Escreva o resultado da chamada do método compute() aqui
+        Scanner input = new Scanner(System.in);
+        Ex02 ex02 = new Ex02();
+
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
+
+        System.out.println(ex02.compute(a, b, c));
     }
 
     String compute(int a, int b, int c) {
-        String output = null;
+
         //put your logic here
-        return output;
+
+        if(a <= 0 || b <= 0 || c <= 0) return "Erro";
+
+        if(a == b && a == c) return "Equilatero";
+
+
+        if(a == b && a != c || b == c && a != b || a == c && b != a) return "Isosceles";
+
+        if(a + b <= c || a + c <= b || b + c <= a) return "Nao forma triangulo";
+
+        return "Escaleno";
     }
 }

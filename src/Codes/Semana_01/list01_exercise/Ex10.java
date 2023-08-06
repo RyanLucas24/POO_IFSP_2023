@@ -1,4 +1,4 @@
-package br.edu.ifsp.list01;
+package Codes.Semana_01.list01_exercise;
 
 /*
     Você está na Austrália treinando cangurus para se locomoverem em linha reta. Você quer saber se dois cangurus
