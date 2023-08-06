@@ -1,5 +1,7 @@
 package Codes.Semana_01.list01_exercise;
 
+import java.util.Scanner;
+
 /*
     Osmar adora chocolates e vai para a loja com N dinheiro no bolso. O preço de cada chocolate é C.
     A loja oferece um desconto: para cada M embalagens que ele dá para a loja, ele ganha um chocolate grátis.
@@ -18,14 +20,27 @@ package Codes.Semana_01.list01_exercise;
 public class Ex04 {
 
     public static void main(String[] args) {
+
+        Scanner leitor = new Scanner(System.in);
+        Ex04 ex04 = new Ex04();
+
+        int N = leitor.nextInt();
+        int C = leitor.nextInt();
+        int M = leitor.nextInt();
+
+        System.out.println(ex04.compute(N, C, M));
         //Leia o input
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
         //Escreva o resultado da chamada do método compute() aqui
     }
 
     int compute(int n, int c, int m) {
-        int output =  -1;
-        //put your logic here
-        return output;
+
+        if(c < 0 || m < 0) return 0;
+        int qtd = n/c;
+        int bonus = m/c;
+        int total = qtd + bonus;
+
+        return total;
     }
 }
