@@ -1,5 +1,7 @@
 package Codes.Semana_01.list01_exercise;
 
+import java.util.Scanner;
+
 /*
     Escrever um programa que, dado um ano válido qualquer, verifica se ele é bissexto ou não:
 
@@ -17,6 +19,14 @@ package Codes.Semana_01.list01_exercise;
 public class Ex03 {
 
     public static void main(String[] args) {
+
+        Scanner leitor = new Scanner(System.in);
+        Ex03 ex03 = new Ex03();
+
+        int ano = leitor.nextInt();
+
+        System.out.println(ex03.compute(ano));
+
         //Leia o input
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
         //Escreva o resultado da chamada do método compute() aqui
@@ -24,8 +34,13 @@ public class Ex03 {
 
 
     String compute(int input) {
-        String output = null;
-        //put your logic here
-        return output;
+
+        if(input <= 0) return "Erro";
+
+        if(input % 400 == 0) return "Ano bissexto";
+
+        if(input % 4 == 0 && input % 100 != 0) return "Ano bissexto";
+
+        return "Ano nao bissexto";
     }
 }
