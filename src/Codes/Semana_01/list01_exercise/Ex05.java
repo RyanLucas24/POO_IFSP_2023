@@ -1,5 +1,12 @@
 package Codes.Semana_01.list01_exercise;
 
+
+import java.util.Locale;
+import java.text.DecimalFormatSymbols;
+import javax.print.DocFlavor;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
 /*
     A avenida principal da cidade de Algoritmopolis possui limite de velocidade de L km/h.
     Se o motorista ultrapassar essa velocidade, é aplicado uma multa de R$ M, mais R$ A
@@ -23,14 +30,29 @@ package Codes.Semana_01.list01_exercise;
 public class Ex05 {
 
     public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        Ex05 ex05 = new Ex05();
+
+        int L = leitor.nextInt();
+        double M = leitor.nextDouble();
+        double A = leitor.nextDouble();
+        int V = leitor.nextInt();
+
+        System.out.println(ex05.compute(L,M,A,V));
         //Leia o input
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
         //Escreva o resultado da chamada do método compute() aqui
     }
 
-    String compute(int L, double m, double a, int v) {
-        String output =  null;
-        //put your logic here
-        return output;
+    String compute(int L, double M, double A, int V) {
+
+        if(V <= L) return "0.00";
+
+        double multa = M + ((V-L) * A);
+
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
+        DecimalFormat decimalFormat = new DecimalFormat("#.00", symbols);
+
+        return decimalFormat.format(multa);
     }
 }

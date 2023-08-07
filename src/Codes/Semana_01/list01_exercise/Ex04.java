@@ -45,9 +45,9 @@ public class Ex04 {
 
         int total = qtd + bonus ;
 
-        if((bonus + sobra)/m >= 1){
+        if(bonus + sobra/m >= 1){
 
-            if(sobra >= 1) total+=sobra;
+            if(sobra >= 1) total += sobra;
 
             while(bonus/m >= 1) {
                 total += bonus / m;
