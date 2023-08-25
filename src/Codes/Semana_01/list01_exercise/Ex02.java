@@ -24,12 +24,12 @@ public class Ex02 {
         //Leia o input
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
         //Escreva o resultado da chamada do método compute() aqui
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         Ex02 ex02 = new Ex02();
 
-        int a = input.nextInt();
-        int b = input.nextInt();
-        int c = input.nextInt();
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
 
         System.out.println(ex02.compute(a, b, c));
     }

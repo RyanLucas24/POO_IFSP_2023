@@ -22,30 +22,45 @@ public class Ex04 {
 
     public static void main(String[] args) {
 
-        Scanner leitor = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         Ex04 ex04 = new Ex04();
 
-        int N = leitor.nextInt();
-        int C = leitor.nextInt();
-        int M = leitor.nextInt();
+        int dinheiro = scanner.nextInt();
+        int precoChocolate = scanner.nextInt();
+        int embalagensParaTroca = scanner.nextInt();
 
-        System.out.println(ex04.compute(N, C, M));
+        System.out.println(ex04.compute(dinheiro, precoChocolate, embalagensParaTroca));
         //Leia o input
         //Crie uma variável do tipo deste arquivo. Exemplo: Ex02 ex = new Ex02();
         //Escreva o resultado da chamada do método compute() aqui
     }
 
-    int compute(int n, int c, int m) {
+    int compute(int dinheiro, int precoChocolate, int embalagensParaTroca) {
 
-        int qtd = n / c;
+        int quantidadeChocolate = dinheiro / precoChocolate;
 
-        int bonus = qtd / m;
+        int bonusDeChocolates = quantidadeChocolate / embalagensParaTroca;
 
-        int sobra = qtd % m;
+        int sobraDeChocolates = quantidadeChocolate % embalagensParaTroca;
 
-        int total = qtd + bonus ;
+        int totalDeChocolates = quantidadeChocolate;
 
-        if(bonus + sobra/m >= 1){
+        while(bonusDeChocolates > 1){
+
+            totalDeChocolates += bonusDeChocolates;
+            bonusDeChocolates = bonusDeChocolates / quantidadeChocolate + sobraDeChocolates;
+            sobraDeChocolates = bonusDeChocolates % quantidadeChocolate + sobraDeChocolates;
+        }
+
+        /*
+
+        int sobra = quantidadeChocolate % embalagensParaTroca;
+
+        int total = quantidadeChocolate + bonus ;
+
+
+
+        /*if(bonus + sobra/embalagensParaTroca >= 1){
 
             if(sobra >= 1) total += sobra;
 
@@ -55,8 +70,8 @@ public class Ex04 {
                 bonus = bonus / m + sobra;
             }
 
-        }
+        }*/
 
-        return total;
+        return totalDeChocolates;
     }
 }

@@ -18,8 +18,8 @@ import java.util.Scanner;
 class Ex01 {
 
     public static void main(String[] args) {
-        final Scanner entrada = new Scanner(System.in);
-        final int input = entrada.nextInt();
+        final Scanner scanner = new Scanner(System.in);
+        final int input = scanner.nextInt();
         final Ex01 ex01 = new Ex01();
         System.out.println(ex01.calcular(input));
         //Leia o input
